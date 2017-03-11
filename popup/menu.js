@@ -19,18 +19,19 @@ function onError(error) {
 initialize();
 function initialize() {
 }
-function execCmd(code) {
-  browser.tabs.executeScript(null, {
+function execCmd(code, onExecuted) {
+  var executing = browser.tabs.executeScript({
     code: code
   });
+  executing.then(onExecuted, onError);
 }
 function cmdEdit() {
-  execCmd('document.getElementsByTagName("html").item(0).contentEditable=true;');
+  execCmd('document.getElementsByTagName("html").item(0).contentEditable=true;', function(value){});
 }
 function cmdSimple(cmd, value) {
   cmdEdit();
   if (!value) {
     value = '';
   }
-  execCmd('window.document.execCommand("' + cmd + '", false, "' + value + '");');
+  execCmd('document.execCommand("' + cmd + '", false, "' + value + '");', function(value){alert('ok ' + value)});
 }
