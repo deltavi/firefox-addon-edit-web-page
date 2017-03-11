@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Verdana,Geneva,sans-serif;
+    font-size: 12px;
+    user-select: none;
+    -moz-user-select: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+#menu {
+    border-top: 6px solid dodgerblue;
+    
+}
+.button {
+    margin: 0;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.button:hover {
+    background-color: #CCDDFF;
+}

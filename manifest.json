@@ -1,0 +1,41 @@
+{
+  "description": "Edit current web page",
+  "manifest_version": 2,
+  "name": "Edit Web Page",
+  "version": "1.0",
+  "homepage_url": "http://www.vincenzodevivo.com",
+  "developer": {
+    "name": "Vincenzo De Vivo",
+    "url": "http://www.vincenzodevivo.com"
+  },
+  "icons": {
+    "16": "icons/icon.16x16.png",
+    "20": "icons/icon.20x20.png",
+    "24": "icons/icon.24x24.png",
+    "32": "icons/icon.32x32.png",
+    "48": "icons/icon.48x48.png",
+    "64": "icons/icon.64x64.png",
+    "128": "icons/icon.128x128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/icon.32x32.png",
+    "default_title": "Edit Web Page",
+    "default_popup": "popup/menu.html"
+  },
+  "options_ui": {
+    "page": "settings/options.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "applications": {
+    "gecko": {
+      "id": "firefox-addon-edit-web-page@vincenzodevivo.com",
+      "strict_min_version": "45.0"
+    }
+  }
+}
